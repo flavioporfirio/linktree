@@ -9,15 +9,21 @@
   font-size: 62.5%; /* 1rem = 10px */
 }
 
+body.dark-purple {
+  --bg-color: #1d2a35;
+  --text-color: white;
+  --box-color: #af21af;
+}
 body {
   font-family: "Roboto", sans-serif;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+
+  background-color: var(--bg-color);
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 svg {
@@ -28,7 +34,8 @@ a {
   text-decoration: none;
 }
 
-section {
+.container {
+  width: 25rem;
   margin: 5rem auto;
   text-align: center;
 }
@@ -51,10 +58,10 @@ h1 {
   margin-top: 2.4rem 0 0.8rem;
 }
 
-section p {
+.container p {
   font-family: "Roboto Mono", monospace;
   font-weight: 400;
-  color: #00082f;
+  color: var(--text-color);
   opacity: 0.8rem;
   font-size: 1.8rem;
 }
@@ -67,7 +74,7 @@ section p {
 }
 
 .lista-links li a {
-  background-color: purple;
+  background-color: var(--box-color);
   color: white;
 
   display: flex;
@@ -76,22 +83,22 @@ section p {
 
   text-transform: uppercase;
 
-  width: 25rem;
   padding: 1.5rem;
+  font-size: 1.4rem;
 
-  margin-bottom: 1.6rem;
   border-radius: 0.6rem;
+  margin-bottom: 1.6rem;
 
-  transition: background 800ms;
+  transition: background 1200ms;
 }
 ul li a:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 footer {
   font-weight: 500;
   font-size: 1.3rem;
-  color: #00082f;
+  color: var(--text-color);
   opacity: 0.6;
   transition: opacity 800ms;
 }
@@ -101,5 +108,5 @@ footer:hover {
 }
 
 footer a {
-  color: #00082f;
+  color: var(--text-color);
 }
